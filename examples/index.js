@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TelegramLoginButton from '../src/';
+import TelegramLoginButton from 'react-telegram-login';
 
 const responseTelegram = response => {
   console.log(response);
@@ -8,7 +8,7 @@ const responseTelegram = response => {
 
 ReactDOM.render(
   <div>
-    <TelegramLoginButton />
+    <TelegramLoginButton dataOnauth={this.responseTelegram} botName="OdauBot" />
   </div>,
   document.getElementById('telegram-login')
 );

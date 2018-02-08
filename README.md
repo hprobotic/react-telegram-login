@@ -2,6 +2,8 @@
 
 > A Telegram oAUth Sign-in / Log-in Component for React
 
+![Code](https://i.imgur.com/AE3yyRx.png)
+
 ## Install
 
 ```
