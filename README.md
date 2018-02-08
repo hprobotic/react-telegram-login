@@ -42,8 +42,6 @@ to all of the TelegramUser methods listed here: https://core.telegram.org/widget
 
 You can also access the returned values via the following properties on the returned object.
 
-## onSuccess callback ( w/ offline true)
-
 | property name | value  |    definition    |
 | :-----------: | :----: | :--------------: |
 |     user      | object | user information |
