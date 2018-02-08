@@ -1,6 +1,6 @@
 {
   "name": "react-telegram-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React telegram login widget for web",
   "main": "build/index.js",
   "peerDependencies": {
@@ -26,5 +26,23 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hprobotic/react-telegram-login.git"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/hprobotic/react-telegram-login/issues"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "homepage": "https://github.com/hprobotic/react-telegram-login#readme"
 }
