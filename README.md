@@ -65,7 +65,7 @@ npm run start
 ```
 
 Default dev server runs at localost:8080 in browser.
-You can set IP and PORT in webpack.config.dev.js
+You can set IP and PORT in webpack.config.js
 
 ## Run Tests
 
