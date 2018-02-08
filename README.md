@@ -19,14 +19,14 @@ yarn add react-telegram-login
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TelegramLogin from 'react-telegram-login';
+import TelegramLoginButton from 'react-telegram-login';
 
 const responseTelegram = response => {
   console.log(response);
 };
 
 ReactDOM.render(
-  <TelegramLogin dataOnauth={this.responseTelegram} botName="OdauBot" />,
+  <TelegramLoginButton dataOnauth={this.responseTelegram} botName="OdauBot" />,
   document.getElementById('telegramButton')
 );
 ```
@@ -35,7 +35,7 @@ ReactDOM.render(
 
 Telegram Scopes List: https://core.telegram.org/widgets/login
 
-## dataOnauth callback ( w/ offline false)
+## dataOnauth callback
 
 dataOnauth callback returns a TelegramUser object which provides access
 to all of the TelegramUser methods listed here: https://core.telegram.org/widgets/login.
@@ -48,14 +48,14 @@ You can also access the returned values via the following properties on the retu
 
 You can also pass child components such as icons into the button component.
 
-Sample success response from Telegram
+Sample success response from Telegram:
 
 ```json
 
 ```
 
 ```js
-<TelegramButton dataOnauth={this.handleUserInfo} botName="OdauBot" />
+<TelegramLoginButton dataOnauth={this.handleUserInfo} botName="OdauBot" />
 ```
 
 ## Dev Server

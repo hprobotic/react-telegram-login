@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-export default class TelegramButton extends React.Component {
+export default class TelegramLoginButton extends React.Component {
   constructor(props) {
     super(props);
   }
