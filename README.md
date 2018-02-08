@@ -35,9 +35,9 @@ ReactDOM.render(
 
 Telegram Scopes List: https://core.telegram.org/widgets/login
 
-## onSuccess callback ( w/ offline false)
+## dataOnauth callback ( w/ offline false)
 
-onSuccess callback returns a TelegramUser object which provides access
+dataOnauth callback returns a TelegramUser object which provides access
 to all of the TelegramUser methods listed here: https://core.telegram.org/widgets/login.
 
 You can also access the returned values via the following properties on the returned object.
@@ -47,6 +47,12 @@ You can also access the returned values via the following properties on the retu
 |     user      | object | user information |
 
 You can also pass child components such as icons into the button component.
+
+Sample success response from Telegram
+
+```json
+
+```
 
 ```js
 <TelegramButton dataOnauth={this.handleUserInfo} botName="OdauBot" />
