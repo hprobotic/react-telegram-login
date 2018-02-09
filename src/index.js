@@ -28,11 +28,13 @@ export default class TelegramLoginButton extends React.Component {
   render() {
     return (
       <div
-        {...this.props}
+        className={this.props.className}
         ref={component => {
           this.instance = component;
         }}
-      />
+      >
+        {this.props.children}
+      </div>
     );
   }
 }

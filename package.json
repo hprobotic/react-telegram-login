@@ -1,6 +1,6 @@
 {
   "name": "react-telegram-login",
-  "version": "1.0.2",
+  "version": "1.0.2-beta-1",
   "description": "React telegram login widget for web",
   "main": "build/index.js",
   "peerDependencies": {
