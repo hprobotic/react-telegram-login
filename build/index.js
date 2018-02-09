@@ -116,12 +116,11 @@ var TelegramLoginButton = function (_React$Component) {
           dataSize = _props.dataSize,
           requestAccess = _props.requestAccess,
           usePic = _props.usePic,
-          dataOnauth = _props.dataOnauth;
+          _dataOnauth = _props.dataOnauth;
 
       window.TelegramLoginWidget = {
-        callback: dataOnauth,
         dataOnauth: function dataOnauth(user) {
-          this.callback(user);
+          return _dataOnauth(user);
         }
       };
 
