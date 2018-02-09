@@ -6,13 +6,14 @@ class TelegramLoginButton extends React.Component {
     super(props);
   }
   componentDidMount() {
-    const { botName, dataSize, requestAccess, usePic } = this.props;
+    const { botName, dataSize, requestAccess, usePic, dataOnauth } = this.props;
     window.TelegramLoginWidget = {
-      self: this,
+      callback: dataOnauth,
       dataOnauth: function(user) {
-        self.props.dataOnauth(user);
+        this.callback(user);
       }
     };
+
     const script = document.createElement('script');
     script.src = 'https://telegram.org/js/telegram-widget.js?2';
     script.setAttribute('data-telegram-login', botName || 'samplebot');
