@@ -28,7 +28,7 @@ export default class TelegramLoginButton extends React.Component {
   render() {
     return (
       <div
-        id="telegram-button"
+        {...this.props}
         ref={component => {
           this.instance = component;
         }}
