@@ -5,18 +5,12 @@ export default class TelegramLoginButton extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  dataOnauth(user, self) {
-    self.props.dataOnauth(user);
-  }
-
   componentDidMount() {
-    const self = this;
     const { botName, dataSize, requestAccess, usePic } = this.props;
     window.TelegramLoginWidget = {
-      callback: this.dataOnauth,
+      self: this,
       dataOnauth: function(user) {
-        this.callback(user, self);
+        self.props.dataOnauth(user);
       }
     };
 
