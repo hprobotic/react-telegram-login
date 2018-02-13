@@ -2,7 +2,7 @@
 
 > A Telegram oAUth Sign-in / Log-in Component for React
 
-![Code](https://i.imgur.com/AE3yyRx.png)
+![Code](https://i.imgur.com/PYyCD3w.png)
 
 ## Install
 
@@ -22,13 +22,13 @@ yarn add react-telegram-login
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TelegramLoginButton from 'react-telegram-login';
-
-const responseTelegram = response => {
+ 
+const handleTelegramResponse = response => {
   console.log(response);
 };
-
+ 
 ReactDOM.render(
-  <TelegramLoginButton dataOnauth={this.responseTelegram} botName="OdauBot" />,
+  <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="OdauBot" />,
   document.getElementById('telegramButton')
 );
 ```
@@ -53,7 +53,7 @@ You can also pass child components such as icons into the button component.
 Sample success response from Telegram:
 
 ```json
-
+// TODO: add
 ```
 
 ```js
