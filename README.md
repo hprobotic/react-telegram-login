@@ -32,6 +32,9 @@ ReactDOM.render(
   document.getElementById('telegramButton')
 );
 ```
+### Notes:
+- Login widget will not work on `localhost` or `local-ip-address`. Use should create and register your bot domain with BotFather to get that work. You can create your custom domain. For example: `yourdomain.local` by add new record point to your local ip by edit `hosts` file.
+- It's only run on port 80. When you use `create-react-app`. You must run `sudo yarn PORT=80 start`
 
 ## Parameters
 
@@ -65,8 +68,6 @@ Sample success response from Telegram:
 ```
 npm run start
 ```
-
-Default dev server runs at localost:8080 in browser.
 You can set IP and PORT in webpack.config.js
 
 ## Run Tests
