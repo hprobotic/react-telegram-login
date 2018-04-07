@@ -1,4 +1,4 @@
-# React Telegram Login
+# React Telegram Login <img src="https://i.imgur.com/73cXluE.png" width="240" heigth="auto" />
 
 > A Telegram oAUth Sign-in / Log-in Component for React
 
