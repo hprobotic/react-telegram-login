@@ -46,14 +46,6 @@ Telegram Scopes List: https://core.telegram.org/widgets/login
 dataOnauth callback returns a TelegramUser object which provides access
 to all of the TelegramUser methods listed here: https://core.telegram.org/widgets/login.
 
-You can also access the returned values via the following properties on the returned object.
-
-| property name | value  |    definition    |
-| :-----------: | :----: | :--------------: |
-|     user      | object | user information |
-
-You can also pass child components such as icons into the button component.
-
 ### Receiving authorization data
 After a successful authorization, the widget can return data in two ways:
 
