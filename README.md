@@ -1,4 +1,5 @@
 # React Telegram Login
+<img src="https://i.imgur.com/73cXluE.png" width="240" heigth="auto" />
 
 > A Telegram oAUth Sign-in / Log-in Component for React
 
@@ -45,19 +46,11 @@ Telegram Scopes List: https://core.telegram.org/widgets/login
 dataOnauth callback returns a TelegramUser object which provides access
 to all of the TelegramUser methods listed here: https://core.telegram.org/widgets/login.
 
-You can also access the returned values via the following properties on the returned object.
+### Receiving authorization data
+After a successful authorization, the widget can return data in two ways:
 
-| property name | value  |    definition    |
-| :-----------: | :----: | :--------------: |
-|     user      | object | user information |
-
-You can also pass child components such as icons into the button component.
-
-Sample success response from Telegram:
-
-```json
-// TODO: add
-```
+* by redirecting the user to the URL specified in the data-auth-url attribute with the following parameters: `id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date` and `hash`;
+* by calling the callback function data-onauth with the JSON-object containing `id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date` and `hash` fields.
 
 ```js
 <TelegramLoginButton dataOnauth={this.handleUserInfo} botName="OdauBot" />
