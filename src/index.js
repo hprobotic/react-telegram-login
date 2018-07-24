@@ -16,7 +16,7 @@ class TelegramLoginButton extends React.Component {
     script.setAttribute('data-telegram-login', botName || 'samplebot');
     script.setAttribute('data-size', dataSize || 'large');
     script.setAttribute('data-request-access', requestAccess || 'write');
-    script.setAttribute('data-userpic', !usePic);
+    script.setAttribute('data-userpic', !!usePic);
     script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
     script.async = true;
     this.instance.appendChild(script);
