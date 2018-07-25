@@ -377,7 +377,7 @@ var TelegramLoginButton = function (_React$Component) {
       script.setAttribute('data-telegram-login', botName);
       script.setAttribute('data-size', dataSize);
       script.setAttribute('data-request-access', requestAccess);
-      script.setAttribute('data-userpic', !!usePic);
+      script.setAttribute('data-userpic', usePic);
       script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
       script.async = true;
       this.instance.appendChild(script);
