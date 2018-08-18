@@ -7,15 +7,18 @@ class TelegramLoginButton extends React.Component {
     super(props);
   }
   componentDidMount() {
-    const { botName, dataSize, requestAccess, usePic, dataOnauth } = this.props;
+    const { botName, buttonSize, cornerRadius, requestAccess, usePic, dataOnauth } = this.props;
     window.TelegramLoginWidget = {
       dataOnauth: user => dataOnauth(user)
     };
 
     const script = document.createElement('script');
-    script.src = 'https://telegram.org/js/telegram-widget.js?2';
+    script.src = 'https://telegram.org/js/telegram-widget.js?4';
     script.setAttribute('data-telegram-login', botName);
-    script.setAttribute('data-size', dataSize);
+    script.setAttribute('data-size', buttonSize);
+    if (cornerRadius !== undefined) {
+      script.setAttribute('data-radius', cornerRadius);
+    }
     script.setAttribute('data-request-access', requestAccess);
     script.setAttribute('data-userpic', usePic);
     script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
@@ -40,7 +43,8 @@ class TelegramLoginButton extends React.Component {
 TelegramLoginButton.propTypes = {
   botName: PropTypes.string.isRequired,
   dataOnauth: PropTypes.func,
-  dataSize: PropTypes.oneOf(['large', 'medium', 'small']),
+  buttonSize: PropTypes.oneOf(['large', 'medium', 'small']),
+  cornerRadius: PropTypes.number,
   requestAccess: PropTypes.string,
   usePic: PropTypes.bool,
 };
@@ -48,7 +52,7 @@ TelegramLoginButton.propTypes = {
 TelegramLoginButton.defaultProps = {
   botName: 'samplebot',
   dataOnauth: () => undefined,
-  dataSize: 'large',
+  buttonSize: 'large',
   requestAccess: 'write',
   usePic: true,
 }

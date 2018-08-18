@@ -361,7 +361,8 @@ var TelegramLoginButton = function (_React$Component) {
     value: function componentDidMount() {
       var _props = this.props,
           botName = _props.botName,
-          dataSize = _props.dataSize,
+          buttonSize = _props.buttonSize,
+          cornerRadius = _props.cornerRadius,
           requestAccess = _props.requestAccess,
           usePic = _props.usePic,
           _dataOnauth = _props.dataOnauth;
@@ -373,9 +374,12 @@ var TelegramLoginButton = function (_React$Component) {
       };
 
       var script = document.createElement('script');
-      script.src = 'https://telegram.org/js/telegram-widget.js?2';
+      script.src = 'https://telegram.org/js/telegram-widget.js?4';
       script.setAttribute('data-telegram-login', botName);
-      script.setAttribute('data-size', dataSize);
+      script.setAttribute('data-size', buttonSize);
+      if (cornerRadius !== undefined) {
+        script.setAttribute('data-radius', cornerRadius);
+      }
       script.setAttribute('data-request-access', requestAccess);
       script.setAttribute('data-userpic', usePic);
       script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
@@ -406,7 +410,8 @@ var TelegramLoginButton = function (_React$Component) {
 TelegramLoginButton.propTypes = {
   botName: _propTypes2.default.string.isRequired,
   dataOnauth: _propTypes2.default.func,
-  dataSize: _propTypes2.default.oneOf(['large', 'medium', 'small']),
+  buttonSize: _propTypes2.default.oneOf(['large', 'medium', 'small']),
+  cornerRadius: _propTypes2.default.number,
   requestAccess: _propTypes2.default.string,
   usePic: _propTypes2.default.bool
 };
@@ -416,7 +421,7 @@ TelegramLoginButton.defaultProps = {
   dataOnauth: function dataOnauth() {
     return undefined;
   },
-  dataSize: 'large',
+  buttonSize: 'large',
   requestAccess: 'write',
   usePic: true
 };
