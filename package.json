@@ -1,12 +1,19 @@
 {
   "name": "react-telegram-login",
-  "version": "1.0.2-beta-6",
+  "version": "1.0.3",
   "description": "React telegram login widget for web",
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^15.5.4"
   },
-  "keywords": ["passport", "telegram", "auth", "login", "oauth", "react"],
+  "keywords": [
+    "passport",
+    "telegram",
+    "auth",
+    "login",
+    "oauth",
+    "react"
+  ],
   "dependencies": {
     "react": "^15.5.4"
   },
