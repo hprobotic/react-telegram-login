@@ -3,9 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 class TelegramLoginButton extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     const { botName, buttonSize, cornerRadius, requestAccess, usePic, dataOnauth } = this.props;
     window.TelegramLoginWidget = {
