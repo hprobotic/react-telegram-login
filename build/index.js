@@ -350,10 +350,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TelegramLoginButton = function (_React$Component) {
   _inherits(TelegramLoginButton, _React$Component);
 
-  function TelegramLoginButton(props) {
+  function TelegramLoginButton() {
     _classCallCheck(this, TelegramLoginButton);
 
-    return _possibleConstructorReturn(this, (TelegramLoginButton.__proto__ || Object.getPrototypeOf(TelegramLoginButton)).call(this, props));
+    return _possibleConstructorReturn(this, (TelegramLoginButton.__proto__ || Object.getPrototypeOf(TelegramLoginButton)).apply(this, arguments));
   }
 
   _createClass(TelegramLoginButton, [{
