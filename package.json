@@ -4,7 +4,7 @@
   "description": "React telegram login widget for web",
   "main": "build/index.js",
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.13.1"
   },
   "keywords": [
     "passport",
@@ -15,7 +15,7 @@
     "react"
   ],
   "dependencies": {
-    "react": "^16.8.6"
+    "react": "^16.13.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
