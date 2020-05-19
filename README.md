@@ -46,6 +46,10 @@ Telegram Scopes List: https://core.telegram.org/widgets/login
 dataOnauth callback returns a TelegramUser object which provides access
 to all of the TelegramUser methods listed here: https://core.telegram.org/widgets/login.
 
+## dataAuthUrl redirection url
+
+dataAuthUrl is a string which corresponds to the url where the user is redirected after a successful authorization. You should either use dataAuthUrl or dataOnauth, not both of them
+
 ### Receiving authorization data
 After a successful authorization, the widget can return data in two ways:
 

@@ -3,8 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 class TelegramLoginButton extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
-    const { botName, buttonSize, cornerRadius, requestAccess, usePic, dataOnauth } = this.props;
+    const { botName, buttonSize, cornerRadius, requestAccess, usePic, dataOnauth, dataAuthUrl } = this.props;
     window.TelegramLoginWidget = {
       dataOnauth: user => dataOnauth(user)
     };
@@ -18,7 +21,11 @@ class TelegramLoginButton extends React.Component {
     }
     script.setAttribute('data-request-access', requestAccess);
     script.setAttribute('data-userpic', usePic);
-    script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
+    if (dataAuthUrl !== undefined) {
+      script.setAttribute('data-auth-url', dataAuthUrl);
+    } else {
+      script.setAttribute('data-onauth', 'TelegramLoginWidget.dataOnauth(user)');
+    }
     script.async = true;
     this.instance.appendChild(script);
   }
