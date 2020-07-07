@@ -29,12 +29,13 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
-    "prop-types": "^15.6.2",
-    "webpack": "^2.6.1"
+    "prop-types": "^15.7.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "repository": {
     "type": "git",

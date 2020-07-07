@@ -7,6 +7,6 @@ const handleTelegramResponse = response => {
 };
  
 ReactDOM.render(
-  <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="OdauBot" />,
+  <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="OdauBot" language="en" />,
   document.getElementById('telegramButton')
 );

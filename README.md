@@ -53,8 +53,9 @@ dataAuthUrl is a string which corresponds to the url where the user is redirecte
 ### Receiving authorization data
 After a successful authorization, the widget can return data in two ways:
 
-* by redirecting the user to the URL specified in the data-auth-url attribute with the following parameters: `id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date` and `hash`;
-* by calling the callback function data-onauth with the JSON-object containing `id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date` and `hash` fields.
+* by redirecting the user to the URL specified in the data-auth-url attribute with the following parameters: 
+`id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date`, `hash` and `lang`;
+* by calling the callback function data-onauth with the JSON-object containing `id`, `first_name`, `last_name`, `username`, `photo_url`, `auth_date`, `hash` and `lang` fields.
 
 ```jsx
 <TelegramLoginButton dataOnauth={this.handleUserInfo} botName="OdauBot" />
