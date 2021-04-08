@@ -16,13 +16,14 @@ class TelegramLoginButton extends React.Component {
       dataOnauth,
       dataAuthUrl,
       lang,
+      widgetVersion,
     } = this.props;
     window.TelegramLoginWidget = {
       dataOnauth: (user) => dataOnauth(user),
     };
 
     const script = document.createElement("script");
-    script.src = "https://telegram.org/js/telegram-widget.js?9";
+    script.src = "https://telegram.org/js/telegram-widget.js?" + widgetVersion;
     script.setAttribute("data-telegram-login", botName);
     script.setAttribute("data-size", buttonSize);
     if (cornerRadius !== undefined) {
@@ -65,6 +66,7 @@ TelegramLoginButton.propTypes = {
   requestAccess: PropTypes.string,
   usePic: PropTypes.bool,
   lang: PropTypes.string,
+  widgetVersion: PropTypes.number,
 };
 
 TelegramLoginButton.defaultProps = {
@@ -74,6 +76,7 @@ TelegramLoginButton.defaultProps = {
   requestAccess: "write",
   usePic: true,
   lang: "en",
+  widgetVersion: 9,
 };
 
 export default TelegramLoginButton;
