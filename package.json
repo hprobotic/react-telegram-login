@@ -2,7 +2,8 @@
   "name": "react-telegram-login",
   "version": "1.1.2",
   "description": "React telegram login widget for web",
-  "main": "build/index.js",
+  "main": "dist/index.tsx",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
     "react": "^16.13.1"
   },
@@ -19,23 +20,16 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "build": "rm -rf dist && npx typescript",
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "John Pham",
     "email": "hprobotic@gmail.com"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1",
-    "prop-types": "^15.7.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "@types/react": "^16.9.41",
+    "typescript": "^3.9.6"
   },
   "repository": {
     "type": "git",

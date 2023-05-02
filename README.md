@@ -19,12 +19,12 @@ yarn add react-telegram-login
 
 ## How to use
 
-```jsx
+```tsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TelegramLoginButton from 'react-telegram-login';
+import TelegramLoginButton, {type TelegramUser} from 'react-telegram-login';
  
-const handleTelegramResponse = response => {
+const handleTelegramResponse = (response: TelegramUser) => {
   console.log(response);
 };
  

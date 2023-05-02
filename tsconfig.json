@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "target": "es2017",
+        "module": "esnext",
+        "outDir": "dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "jsx": "react"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
