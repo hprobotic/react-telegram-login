@@ -76,7 +76,7 @@ TelegramLoginButton.defaultProps = {
   requestAccess: "write",
   usePic: true,
   lang: "en",
-  widgetVersion: 9,
+  widgetVersion: 22,
 };
 
 export default TelegramLoginButton;
